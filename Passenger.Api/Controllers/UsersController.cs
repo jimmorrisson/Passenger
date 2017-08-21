@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-//using Passenger.Infrastructure.DTO;
-//using Passenger.Infrastructure.Services;
+using Passenger.Infrastracture.DTO;
+using Passenger.Infrastracture.Services;
 
 namespace Passenger.Api.Controllers
 {
     [Route("[controller]")]
     public class UsersController : Controller
     {
-        /*private readonly IUserService _userService;
+        private readonly IUserService _userService;
         public UsersController(IUserService userService)
         {
             _userService = userService;
@@ -19,6 +19,6 @@ namespace Passenger.Api.Controllers
 
         [HttpGet("{email}")]
         public UserDto Get(string email)
-            => _userService.Get(email);*/
+            => _userService.GetDto(email);
     }
 }
