@@ -1,8 +1,4 @@
 {
-  "name": "Passenger.Api",
-  "dependencies": {
-    "Passenger.Infrastracture": "1.0.*"
-  },
   "sdk": {
     "version": "1.0.0-rc4-004771"
   }
