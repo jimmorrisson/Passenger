@@ -10,5 +10,34 @@ namespace Passenger.Core.Domain
         public Vehicle Vehicle { get; protected set; }
         public IEnumerable<Route> Routes { get; protected set; }
         public IEnumerable<DailyRoute> DailyRoutes { get; protected set; }
+
+        protected Driver()
+        {
+            
+        }
+
+        public Driver(Guid userId)
+        {
+            Id = Guid.NewGuid();
+            UserId = userId;
+            //Vehicle = SetVehicle();
+        }
+
+        public Vehicle SetVehicle(string brand, string name, int seats)
+        {
+            try
+            {
+                Vehicle vehicle = new Vehicle(brand, name, seats);
+                if(vehicle != null)
+                {
+                    return vehicle;
+                }
+            }
+            catch
+            {
+
+            }
+            return null;
+        }
     }
 }
